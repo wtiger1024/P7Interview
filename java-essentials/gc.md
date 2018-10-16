@@ -11,7 +11,7 @@
 所以GC设计成新生代(Young Generation)和老生代(Old Generation)。新建对象在新生代区域，过了一段时间还有用（被引用）的对象进入老生代区域。
 新生代又细分为伊甸(Eden)，2个存活区（Survior).另外还有一个永生代，存放class。
 
-### 整个对象的生命周期如下：
+### 完整的垃圾回收过程：
 1. new的时候，进入新生代的伊甸区
 2. 发生一次小GC(minor GC), 有用的对象从eden进入一个survivor区。
 3. 重复2，直到survivor满了。然后移到另一个survivor区。
