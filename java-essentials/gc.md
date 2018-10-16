@@ -2,7 +2,7 @@
 * [3篇博文](https://www.cubrid.org/blog/how-to-monitor-java-garbage-collection/)
 * [G1官方教程](https://www.oracle.com/technetwork/tutorials/tutorials-1876574.html)
 
-
+# 垃圾回收的原理
 ### 垃圾回收器的假设
 垃圾回收器的基本假设：
 * 大部分对象很快就会没用
@@ -34,3 +34,4 @@
 2. 删除没用的对象
 3. 把有用的对象排队放在一起，剩下完整的空闲区域。
 
+# 垃圾回收的监控
