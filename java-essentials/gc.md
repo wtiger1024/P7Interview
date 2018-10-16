@@ -36,6 +36,7 @@
 
 ## 问答
 问：CMS哪些情况下promotion failed导致Full GC,描述下原因
+
 答：minor GC过程中，Survivor的剩余空间不足以容纳Eden和当前Survivor区域的存活对象，然后移至老生代时发现老生代也不足。发生Full GC.
 
 # 垃圾回收的监控
