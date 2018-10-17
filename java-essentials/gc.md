@@ -39,6 +39,18 @@
 答：minor GC过程中，Survivor的剩余空间不足以容纳Eden和当前Survivor区域的存活对象，然后移至老生代时发现老生代也不足。发生Full GC.
 
 # 垃圾回收的监控
+GC是JVM内部行为，通过工具可以观察。
+
+## 常用工具: 
+jstat。
+
+jstat –gc <vmid> 1000 //每1000毫秒刷新一次，打印GC数据。GC数据主要是每个区域（新，老，Eden,Survivor),永生代等区域的容量和使用量。以及minorGC， fullGC的计数和耗时。
+
+## 缺点
+jstat输出的GC耗时是平均值。不是每次GC的具体值。想要看更详细的，每一次GC的数据，需要使用-verbosegc开关
+
+## 图形化监控
+visualGC可以直观的观察每个区域的变化。远程使用需要jstatd配合。
 
 
 # 垃圾回收性能调优
