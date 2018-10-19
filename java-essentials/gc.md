@@ -1,6 +1,7 @@
 ## 学习资料
 * [3篇博文](https://www.cubrid.org/blog/how-to-monitor-java-garbage-collection/)
 * [G1官方教程](https://www.oracle.com/technetwork/tutorials/tutorials-1876574.html)
+* [CMS官方文档](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/cms.html)
 * [jstat官方文档](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jstat.html)
 
 # 垃圾回收的原理
