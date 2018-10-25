@@ -1,5 +1,7 @@
 # 并发
 
+[aqs.pdf] (http://gee.cs.oswego.edu/dl/papers/aqs.pdf)
+
 ## Snychronized关键字内部实现
 * 对象头锁标志表示当前锁类型：无锁，偏向锁，轻量级锁，重量级锁。
 * 偏向锁：对象头记录线程ID，表示该线程锁定
