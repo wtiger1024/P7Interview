@@ -8,7 +8,13 @@
 * 隔离指事物之间互不干扰，
 * 持久指数据写入磁盘。
 
-### MVCC(multi-version concurrent control)
+### 事务的隔离级别
+Read Uncommitted 读未提交（事务A可以读取事务2未提交的数据）
+Repeatable Read 可重复读（MySQL默认），事务A读取过的数据，即使事务B修改了，对事务A也没有影响，可重复读取。（MySQL采用快照的概念实现此隔离级别）
+Read Committed 读已提交（Oracle默认）事务A可以读取事务B已经提交的数据（也即不可重复读）
+Serialize 序列化，事务之间没有并发。
+
+### Mysql为了实现可重复读，采用了MVCC(multi-version concurrent control)机制
 每一行记录都有隐藏的2个字段（创建版本号，删除版本号）。这里的版本号指事务的编号（递增）。更新记录时，原记录标记为删除，删除版本号为当前版本号。然后新增记录（创建版本号为当前版本号）。任何一个事务，只查询小于等于当前事务版本号的记录。
     
 ## 锁
