@@ -22,7 +22,7 @@
     
 ## 锁
 ### 间隙锁(Gap lock)
-innodb为了避免幻读，引入了间隙锁。(https://dev.mysql.com/doc/refman/5.7/en/innodb-locking.html#innodb-gap-locks).mysql的行级锁其实是基于索引记录实现的，间隙锁也是一样。
+innodb为了避免幻读，引入了[间隙锁](https://dev.mysql.com/doc/refman/5.7/en/innodb-locking.html#innodb-gap-locks). mysql的行级锁其实是基于索引记录实现的，间隙锁也是一样。
 
 ## 索引
 
