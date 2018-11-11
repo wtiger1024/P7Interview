@@ -26,6 +26,7 @@
 innodb为了避免幻读，引入了[间隙锁](https://dev.mysql.com/doc/refman/5.7/en/innodb-locking.html#innodb-gap-locks). mysql的行级锁其实是基于索引记录实现的，间隙锁也是一样。
 
 ## 索引
+InnoDB采用B+树（类似平衡二叉树）实现索引。主键作为聚簇索引，数据存在于聚簇索引的叶子节点。其他索引是辅助索引，其叶节点指向聚簇索引，故而查找效率略低。
 
 ## SQL优化
 
