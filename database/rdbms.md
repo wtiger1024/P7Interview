@@ -1,6 +1,6 @@
 # 关系数据库
 
-书籍[MySQL技术内幕-InnoDB存储引擎] (https://www.amazon.com/dp/B009WMBIQC/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
+书籍[MySQL技术内幕-InnoDB存储引擎](https://www.amazon.com/dp/B009WMBIQC/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
 
 ## 事务
 事务的4大特性： ACID， automicity,Consistency,Isolation,Durability.
