@@ -10,3 +10,7 @@
 
 # disruptor, a high performance queue
 * [lmax disruptor doc](http://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf)
+优化思路
+*  重用对象，减少GC
+* false-sharing. 缓存padding，避免变量共享cache line
+* 避免使用lock。尽量使用自旋锁，yield, parkNano等OS、提供的调度机制。
